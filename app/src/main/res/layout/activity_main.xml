@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main">
+
+    <TextView
+        android:id="@+id/id_bot2"
+        android:layout_width="107dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="152dp"
+        android:text="Computer"
+        app:layout_constraintBottom_toTopOf="@+id/iv_bot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id_player"
+        android:layout_width="107dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="156dp"
+        android:text="Player"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_bot" />
+
+    <ImageView
+        android:id="@+id/iv_bot"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="156dp"
+        android:contentDescription="imageBotsChoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_bot2"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageView
+        android:id="@+id/iv_human"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginEnd="159dp"
+        android:contentDescription="ImageHumansChoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_player"
+        app:srcCompat="@drawable/rock" />
+
+    <TextView
+        android:id="@+id/id_score"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:text="Score: Human"
+        app:layout_constraintEnd_toStartOf="@+id/human_score"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_human" />
+
+    <TextView
+        android:id="@+id/human_score"
+        android:layout_width="82dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/score_bot"
+        app:layout_constraintStart_toEndOf="@+id/id_score"
+        app:layout_constraintTop_toBottomOf="@+id/iv_human" />
+
+    <TextView
+        android:id="@+id/bot_score"
+        android:layout_width="82dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/score_bot"
+        app:layout_constraintTop_toBottomOf="@+id/iv_human" />
+
+    <TextView
+        android:id="@+id/score_bot"
+        android:layout_width="81dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:text="Score Bot"
+        app:layout_constraintEnd_toStartOf="@+id/bot_score"
+        app:layout_constraintStart_toEndOf="@+id/human_score"
+        app:layout_constraintTop_toBottomOf="@+id/iv_human" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginEnd="176dp"
+        android:text="who wins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_paper" />
+
+    <Button
+        android:id="@+id/btn_rock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="20dp"
+        android:text="rock"
+        app:layout_constraintEnd_toStartOf="@+id/btn_paper"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score_bot" />
+
+    <Button
+        android:id="@+id/btn_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="20dp"
+        android:text="paper"
+        app:layout_constraintEnd_toStartOf="@+id/btn_scissors"
+        app:layout_constraintStart_toEndOf="@+id/btn_rock"
+        app:layout_constraintTop_toBottomOf="@+id/score_bot" />
+
+    <Button
+        android:id="@+id/btn_scissors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="25dp"
+        android:text="scissors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_paper"
+        app:layout_constraintTop_toBottomOf="@+id/score_bot" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
